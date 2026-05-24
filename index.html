@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 3rd Anniversary, Sayang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- WELCOME SCREEN / GATE -->
+  <div id="welcome-screen" class="welcome-overlay">
+    <!-- Floating star particles inside welcome screen -->
+    <canvas id="welcome-stars"></canvas>
+    <div class="welcome-content">
+      <div class="welcome-heart-glow">
+        <div class="heart-icon"></div>
+      </div>
+      <p class="welcome-date">25 Mei 2023 - 25 Mei 2026</p>
+      <h2 class="welcome-title">Aku punya sesuatu<br>untukmu, Sayang...</h2>
+      <p class="welcome-sub">Nyalakan volume, duduk yang nyaman,<br>dan biarkan aku bercerita.</p>
+      <button id="open-gift-btn">Buka Pesan Ini</button>
+      <p class="welcome-hint">akan ada lagu yang menemani</p>
+    </div>
+  </div>
+
+  <!-- BACKGROUND MUSIC & TOGGLE -->
+  <audio id="bg-music" loop src="assets/music/musik.mp3"></audio>
+  <button class="music-btn" id="musicToggle" title="Play/Pause Music">🎵</button>
+
+  <div class="bg-gradient"></div>
+  <canvas id="space-canvas"></canvas>
+
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-polaroid-wrap">
+        <div class="polaroid hero-polaroid" data-caption="25 Mei 2026">
+          <img src="assets/images/fotoawal.png" alt="Foto berdua" />
+        </div>
+      </div>
+      <h1 class="hero-title">Happy 3rd Anniversary, Sayang!</h1>
+      <p class="hero-subtitle">
+        Sebuah catatan kecil tentang semesta kita.<br>
+        Dari hari pertama kali kita ngobrol, sampai hari ini, 25 Mei 2026.
+      </p>
+    </div>
+  </section>
+
+  <section id="section1">
+    <div class="section-inner">
+      <div class="section-text-container">
+        <span class="section-tag reveal">11 November 2022</span>
+        <h2 class="section-title reveal reveal-delay-1">PDKT yang Panjang (tapi Seru!)</h2>
+        <div class="deco-line reveal reveal-delay-1"></div>
+        <p class="section-text reveal reveal-delay-2">
+          Masih ingat 11 November 2022? Itu hari di mana semuanya dimulai dengan modus dm instagram menanyakan tentang
+          lomba wkkwkwkwkwk ,
+          Tujuh bulan kita saling kenal,saling nunggu balasan chat,
+          dan nyari-nyari topik biar obrolan nggak putus. Masa-masa deg-degan yang serba canggung,
+          Tapi Makasih ya udah mau ngeladenin aku waktu itu, wkwkwk.
+        </p>
+      </div>
+      <div class="scrapbook-grid reveal reveal-delay-2">
+        <div class="polaroid" data-caption="Memori indah kita">
+          <img src="assets/images/pdkt1.png" alt="Foto PDKT 1" />
+        </div>
+        <div class="polaroid" data-caption="Terus bareng ya?">
+          <img src="assets/images/pdkt2.png" alt="Foto PDKT 2" />
+        </div>
+        <div class="polaroid" data-caption="Salah satu hari favoritku">
+          <img src="assets/images/pdkt3.png" alt="Foto PDKT 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section2">
+    <div class="section-inner">
+      <div class="section-text-container">
+        <span class="section-tag reveal">25 Mei 2023</span>
+        <h2 class="section-title reveal reveal-delay-1">Akhirnya Resmi Jadi Kita</h2>
+        <div class="deco-line reveal reveal-delay-1"></div>
+        <p class="section-text reveal reveal-delay-2">
+          25 Mei 2023. Hari di mana aku akhirnya bisa panggil kamu sayang walaupun kamu masih malu malu WKKWKWKW.
+          Di tahun pertama ini rasanya dunia cuma milik berdua. Banyak <em>first time</em>
+          yang kita lewatin bareng, banyak tawa, dan aku bersyukur banget kamu yang ada di sebelahku
+          untuk ngalamin semua itu.
+        </p>
+      </div>
+      <div class="carousel-wrapper reveal reveal-delay-2">
+        <div class="carousel-track" id="carousel2">
+          <div class="polaroid" data-caption="Senyum yang aku suka">
+            <img src="assets/images/20231.png" alt="Tahun 1 foto 1" />
+          </div>
+          <div class="polaroid" data-caption="Selalu bikin kangen">
+            <img src="assets/images/20232.png" alt="Tahun 1 foto 2" />
+          </div>
+          <div class="polaroid" data-caption="Bahagia itu sederhana">
+            <img src="assets/images/20233.png" alt="Tahun 1 foto 3" />
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="prevBtn">←</button>
+          <button class="carousel-btn" id="nextBtn">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section3">
+    <div class="section-inner">
+      <div class="section-text-container">
+        <span class="section-tag reveal">25 Mei 2024</span>
+        <h2 class="section-title reveal reveal-delay-1">Makin Kenal, Makin Sayang</h2>
+        <div class="deco-line reveal reveal-delay-1"></div>
+        <p class="section-text reveal reveal-delay-2">
+          Memasuki tahun kedua, kita makin tahu kebiasaan masing-masing.
+          Setiap berantem kecil (paling karena pengen ketemu hehehe) malah bikin kita makin ngerti satu sama lain.
+          Kita belajar buat nggak cuma jadi pacar, tapi juga jadi sahabat terbaik.
+        </p>
+      </div>
+      <div class="s3-cards reveal reveal-delay-2">
+        <div class="polaroid lightbox-trigger" data-caption="My favorite person" data-src="assets/images/20241.png">
+          <img src="assets/images/20241.png" alt="Tahun 2 foto 1" />
+        </div>
+        <div class="polaroid lightbox-trigger" data-caption="You mean the world to me"
+          data-src="assets/images/20242.png">
+          <img src="assets/images/20242.png" alt="Tahun 2 foto 2" />
+        </div>
+        <div class="polaroid lightbox-trigger" data-caption="Forever to go" data-src="assets/images/20243.png">
+          <img src="assets/images/20243.png" alt="Tahun 2 foto 3" />
+        </div>
+      </div>
+      <p class="click-hint reveal reveal-delay-2">Klik foto untuk memperbesar</p>
+    </div>
+  </section>
+
+  <section id="section4">
+    <div class="section-inner">
+      <div class="section-text-container">
+        <span class="section-tag reveal">25 Mei 2025 s/d 2026</span>
+        <h2 class="section-title reveal reveal-delay-1">Tiga Tahun dan Seterusnya...</h2>
+        <div class="deco-line reveal reveal-delay-1"></div>
+        <p class="section-text reveal reveal-delay-2">
+          Nggak kerasa, hari ini kita udah 3 tahun bareng-bareng.
+          Makasih ya udah nemenin aku berproses dan selalu jadi tempat pulang yang paling nyaman.
+          Perjalanan kita masih panjang, dan aku nggak sabar nulis cerita baru lagi bareng kamu. mungkin sekarang kamu
+          ngerasa aku beda kaya ngerasa aku ga se excited waktu ngejar kamu bukannya hilang perasaan cuman aku gatau
+          lagi mau bahas apa di chat dan lebih enak rasanya kalo ketemu langsung, jadi jangan pernah berpikir kalo aku
+          udah gasayang atau bosen sama kamu ya sayanggg I LOVE YOUUU
+        </p>
+      </div>
+      <div class="s4-big-photo reveal reveal-delay-2">
+        <img src="assets/images/2025.png" alt="Foto tahun ketiga" />
+      </div>
+      <p class="love-quote reveal reveal-delay-2">
+        "You are my universe. I love you then, I love you still, always have, and always will."
+      </p>
+    </div>
+  </section>
+
+  <!-- REFACTORED GALLERY SECTION WITH STACK PREVIEW -->
+  <section id="gallery-section">
+    <div class="section-inner">
+      <div class="section-text-container">
+        <span class="section-tag reveal">Galeri Foto</span>
+        <h2 class="section-title reveal reveal-delay-1">Ayo Lihat Gallery Kita</h2>
+        <div class="deco-line reveal reveal-delay-1"></div>
+        <p class="section-text reveal reveal-delay-2">
+          Kumpulan momen manis, tawa, dan cerita indah yang kita ukir bersama.
+          Setiap sudut menyimpan kenangan berharga yang takkan pernah pudar.
+        </p>
+      </div>
+
+      <!-- Overlapping Polaroid Stack Preview Box -->
+      <div class="preview-stack reveal reveal-delay-2" id="previewStack" title="Klik untuk membuka album penuh">
+        <div class="polaroid">
+          <img src="assets/images/pdkt1.png" alt="Foto kenangan" />
+        </div>
+        <div class="polaroid">
+          <img src="assets/images/20231.png" alt="Foto kenangan" />
+        </div>
+        <div class="polaroid">
+          <img src="assets/images/20241.png" alt="Foto kenangan" />
+        </div>
+        <div class="polaroid">
+          <img src="assets/images/2025.png" alt="Foto kenangan" />
+        </div>
+      </div>
+
+      <!-- Trigger button for fullscreen overlay -->
+      <button class="open-gallery-btn reveal reveal-delay-2" id="openGalleryBtn">Buka Album Kita, Yuk</button>
+    </div>
+  </section>
+
+  <!-- IMMERSIVE FULLSCREEN ALBUM MODAL -->
+  <div id="fullscreen-gallery" class="fullscreen-overlay" role="dialog" aria-modal="true">
+    <div class="overlay-header">
+      <h2>Album Kenangan Kita</h2>
+      <button class="close-overlay-btn" id="closeGalleryBtn">Kembali</button>
+    </div>
+    <div class="overlay-content">
+      <div class="s3-cards" id="gallery-grid">
+        <!-- Dynamically rendered album from gallery.js goes here -->
+      </div>
+    </div>
+  </div>
+
+  <div id="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+      <img id="lightboxImg" src="" alt="Foto besar" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with love in the universe, for you Sayang.</p>
+    <p style="font-size: 0.9rem; margin-top: 5px;">25 Mei 2023 — 25 Mei 2026 & Selamanya</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/gallery-config.js"></script>
+  <script src="assets/js/gallery.js"></script>
+
+</body>
+
+</html>
